@@ -29,6 +29,6 @@ startPicNumber = findPrevPic()+1
 
 
 for i in range(startPicNumber,startPicNumber+captures):
-    camera.capture('/home/pi/Kitepics/kitecam%04d.jpg'  %i)
+    camera.capture('/home/pi/Kitecam/Kitepics/kitecam%04d.jpg'  %i)
     sleep(interval)
 
