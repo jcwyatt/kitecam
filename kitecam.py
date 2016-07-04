@@ -5,12 +5,12 @@ import os
 
 camera = PiCamera()
 
-camera.resolution = (2592,1944)
-#camera.resolution = (640,480)
+#camera.resolution = (2592,1944)
+camera.resolution = (640,480)
 #camera.resolution = (1024,748)
 
 interval = 10 #interval between shots in seconds
-captures = 60 #number of shots to take before stopping
+captures = 3 #number of shots to take before stopping
 
 
 def findPrevPic():    #finds the last picture taken and returns the index number
@@ -29,6 +29,6 @@ startPicNumber = findPrevPic()+1
 
 
 for i in range(startPicNumber,startPicNumber+captures):
-    camera.capture('Kitepics/kitecam%04d.jpg'  %i)
+    camera.capture('/home/pi/Kitepics/kitecam%04d.jpg'  %i)
     sleep(interval)
 
